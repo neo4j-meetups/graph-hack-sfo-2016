@@ -15,6 +15,43 @@
 
 ### Rules
 
+Teams!
+* Teams are encouraged, but individual participation is allowed.
+* Teams may have up to 4 participants. 
+
+Winners
+* 1st place team
+* 2nd place team
+* 3rd place team
+* Honorable mentions team(s)
+
+Criteria for judging
+* Creativity (perhaps including merging disparate data sources)
+* Use of Cypher
+* Interesting new information uncovered
+* Quality of presentation (perhaps including visualization)
+* Completeness
+
+Prize Distribution
+* A variety of prizes will be on display throughout the event
+* Each member of winning teams may choose (1) prize
+* First place team will be announced and choose prizes first, followed by 2nd place team, followed by 3rd place team
+* As long as prize inventory allows, honorable mention teams will be announced and be able to choose prizes
+* Each prize is limited in quanity. Within each winning team, individuals will need to decide who gets which prize.
+
+### Prizes
+
+* Amazon Echo (x2)
+* Amazon Echo Tap (x2)
+* SmartThings Home Automation Kit (x2)
+* Sphero BB-8 droids (x2)
+* GoPro Hero 5 session (x2)
+* Lumio Mini 
+* Neo4j [Rhapsody Bluetooth Headphones](http://www.promotionalspeakers.com/wrapsody) (x4)
+* Neo4j [Aurabox LED display and Bluetooth Speaker](http://www.promotionalspeakers.com/aurabox-c107c) 
+* Neo4j water bottles (x10)
+* Neo4j umbrellas (x10)
+
 ## Datasets
 
 ### Panama Papers + (Offshore Leaks + Bahamas Leaks)
