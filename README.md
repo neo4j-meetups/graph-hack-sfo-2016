@@ -21,7 +21,9 @@
 
 ![](img/pp_screenshot.png)
 
-* [Download from ICIJ Offshore Leaks]()
+* [Download from ICIJ Offshore Leaks](https://offshoreleaks.icij.org/pages/database)
+
+*NOTE: This dataset has an interactive Neo4j Browser guide for exploring the data:*
 
 ### Legis-graph (US Congress)
 
@@ -41,17 +43,23 @@
 
 #### Election Tweets
 
-~[](img/trump_tweets.png)
+![](img/tt_datamodel.png)
 
+![](http://guides.neo4j.com/twitterElection/img/graph_results.png)
+
+*Download*
 ~~~
 wget http://demo.neo4j.com.s3.amazonaws.com/electionTwitter/neo4j-election-twitter-demo.tar.gz
 tar -xvzf neo4j-election-twitter-demo.tar.gz
 cd neo4j-enterprise-3.0.3
 bin/neo4j start
-
-open web browser to http://localhost:7474
-
 ~~~
+
+*[Or use hosted instance](http://bit.ly/trumptweetsneo4j)
+
+*NOTE: This dataset has an interactive Neo4j Browser guide for exploring the data:*
+
+![](img/tt_guide.png)
 
 #### Election Forecast
 
