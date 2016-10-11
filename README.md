@@ -74,6 +74,29 @@ CALL apoc.load.json("http://projects.fivethirtyeight.com/2016-election-forecast/
 RETURN data
 ~~~
 
+### Hillary Clinton's Emails
+
+~~~
+// Creating the graph
+USING PERIODIC COMMIT
+LOAD CSV WITH HEADERS FROM "https://s3-us-west-2.amazonaws.com/neo4j-datasets-public/Emails-refined.csv" AS line
+MERGE (fr:Person {alias: COALESCE(line.MetadataFrom, line.ExtractedFrom,'')})
+MERGE (to:Person {alias: COALESCE(line.MetadataTo, line.ExtractedTo, '')})
+MERGE (em:Email { id: line.Id })
+ON CREATE SET em.foia_doc=line.DocNumber, em.subject=line.MetadataSubject, em.to=line.MetadataTo, em.from=line.MetadataFrom, em.text=line.RawText, em.ex_to=line.ExtractedTo, em.ex_from=line.ExtractedFrom
+MERGE (to)<-[:TO]-(em)-[:FROM]->(fr)
+MERGE (fr)-[r:HAS_EMAILED]->(to)
+ON CREATE SET r.count = 1
+ON MATCH SET r.count = r.count + 1;
+~~~
+
+~~~
+// Updating counts
+MATCH (a:Person)-[r]-(b:Email) WITH a, count(r) as count SET a.count = count;
+~~~
+
+![](img/clinton_datamodel.png)
+
 ### Fivethirtyeight
 
 The Fivethirtyeight teams does an amazing job of providing the data behind many of their stories in their [Github repo](https://github.com/fivethirtyeight/data). There are a lot of possibilities but here are a few ideas we hacked up:
