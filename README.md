@@ -25,9 +25,9 @@ Winners
 * 3rd place team
 * Honorable mentions team(s)
 
-Criteria for judging
+Criteria for judging - all apps/data analysis must use Neo4j
 * Creativity (perhaps including merging disparate data sources)
-* Use of Cypher
+* Use of Cypher and Neo4j
 * Interesting new information uncovered
 * Quality of presentation (perhaps including visualization)
 * Completeness
