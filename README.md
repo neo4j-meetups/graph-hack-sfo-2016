@@ -3,7 +3,7 @@
 ## TLDR
 
 * Build something cool with Neo4j
-* Register your project and team [here](ttps://github.com/neo4j-meetups/graph-hack-sfo-2016)
+* Register your project and team [here](https://hackdash.org/dashboards/graphssf)
 * Present your project 
 * Win cool prizes
 
@@ -27,7 +27,7 @@
 Teams!
 * Teams are encouraged, but individual participation is allowed.
 * Teams may have up to 4 participants. 
-* Register your project and all team mates [here](https://github.com/neo4j-meetups/graph-hack-sfo-2016)
+* Register your project and all team mates [here](https://hackdash.org/dashboards/graphssf)
 
 Winners
 * 1st place team
