@@ -10,8 +10,10 @@
 | 4:30pm-5:00pm | Project pitches       |
 | 5:00pm-5:30pm | Teams form            |
 | 5:30pm-9:00pm | Hacking               |
+| 6:00pm | Food and Drinks served               |
 | 9:00pm-9:45pm | Project presentations |
 | 10:00pm       | Prize announcements   |
+| 10:00pm       | Bar closes (keynote is early!)   |
 
 ### Rules
 
