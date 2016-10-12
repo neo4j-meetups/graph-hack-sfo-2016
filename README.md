@@ -209,13 +209,16 @@ We don't have Neo4j import scripts or graph exports for these, but we think they
 
 You'll need to use Neo4j to participate in the hackathon. You can download Neo4j [here](http://neo4j.com/download) or use one of the hosted versions above.
 
+* [Neo4j Developer Page](https://neo4j.com/developer/)
+* [Neo4j Get Started](https://neo4j.com/developer/get-started/)
+
 ### APOC - Awesome Procedures on Cypher
 
 Graph algorithms, data import, job scheduling, full text search, geospatial, ...
 
-#### Install
+* [Github page](https://github.com/neo4j-contrib/neo4j-apoc-procedures)
+* [APOC Documentation](https://neo4j-contrib.github.io/neo4j-apoc-procedures/)
 
-#### Examples
 
 ### Neo4j Folks
 
