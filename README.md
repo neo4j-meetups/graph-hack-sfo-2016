@@ -86,6 +86,10 @@ Prize Distribution
 
 * `:play http://guides.neo4j.com/legisgraph/fecimport.html`
 
+#### Combined US Congress + FEC
+* Use this browser guide: `:play http://guides.neo4j.com/legisgraph`
+* Or download [this pre-built datastore](https://dl.dropboxusercontent.com/u/67572426/fec-legis-graph/graph.db.zip)
+
 ### US Election Data
 
 #### Election Tweets
