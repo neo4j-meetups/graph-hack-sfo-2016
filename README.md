@@ -1,18 +1,25 @@
 # Graph Hack 2016
 
+## TLDR
+
+* Build something cool with Neo4j
+* Register your project and team [here](ttps://github.com/neo4j-meetups/graph-hack-sfo-2016)
+* Present your project 
+* Win cool prizes
+
 ## Overview
 
 ### Schedule
 
 |               |                       |
-| --------------| ----------------------|
-| 4:00pm-4:30pm | Arrive                |
-| 4:30pm-5:00pm | Project pitches       |
-| 5:00pm-5:30pm | Teams form            |
-| 5:30pm-9:00pm | Hacking               |
-| 6:00pm | Food and Drinks served               |
-| 9:00pm-9:45pm | Project presentations |
-| 10:00pm       | Prize announcements   |
+| --------------| ---------------------------------|
+| 4:00pm-4:30pm | Arrive                           |
+| 4:30pm-5:00pm | Project pitches                  |
+| 5:00pm-5:30pm | Teams form                       |
+| 5:30pm-9:00pm | Hacking                          |
+| 6:00pm        | Food and Drinks served           |
+| 9:00pm-9:45pm | Project presentations            |
+| 10:00pm       | Prize announcements              |
 | 10:00pm       | Bar closes (keynote is early!)   |
 
 ### Rules
@@ -20,6 +27,7 @@
 Teams!
 * Teams are encouraged, but individual participation is allowed.
 * Teams may have up to 4 participants. 
+* Register your project and all team mates [here](https://github.com/neo4j-meetups/graph-hack-sfo-2016)
 
 Winners
 * 1st place team
@@ -70,13 +78,13 @@ Prize Distribution
 
 * [Github repository](https://github.com/legis-graph/legis-graph)
 * [Quickstart import from your web browser](http://johnymontana.github.io/LazyWebCypher/?file=https://raw.githubusercontent.com/legis-graph/legis-graph/master/quickstart/114/legis_graph_import_114.cypher)
+* `:play http://guides.neo4j.com/legisgraph`
+
+### Campaign Finance - FEC Filings
+![](http://guides.neo4j.com/legisgraph/img/fec-dm.png)
 
 
-### Campaign Finance
-
-#### US FEC Filings
-
-#### California Filings
+* `:play http://guides.neo4j.com/legisgraph/fecimport.html`
 
 ### US Election Data
 
@@ -166,6 +174,22 @@ SET r.data = row.album_release_date
 
 ![](img/hiphop_example.png)
 
+### Crime data
+
+Many governments use the Socrata data portal software to make their data (i.e. crime, transportation, etc) available. This means that we can use `apoc.load.json` to import data directly from any Socrata site. For example, to import [San Francisco crime data](https://data.sfgov.org/):
+
+~~~
+CALL apoc.load.json("https://data.sfgov.org/resource/cuks-n6tp.json?$limit=5000&$offset=0") YIELD value AS crime
+MERGE (c:Crime {incidntnum: crime.incidntnum})
+ON CREATE SET c.address=crime.address, c.time=crime.time, c.dayofweek=crime.dayofweek
+MERGE (cat:Category {name: crime.category})
+CREATE (c)-[:HAS_CATEGORY]->(cat)
+MERGE (dis:District {name: crime.pddistrict})
+CREATE (c)-[:OCCURRED_IN]->(dis);
+~~~
+
+
+
 ### Other resources
 
 Beyond the resources listed above.
@@ -177,6 +201,7 @@ We don't have Neo4j import scripts or graph exports for these, but we think they
 * [NASA's Data Portal](https://data.nasa.gov/)
 * [US City Data](http://us-city.census.okfn.org/)
 * [US Spending data](https://www.usaspending.gov/Pages/default.aspx)
+* [SF Open Data](https://data.sfgov.org/)
 
 ## Resources
 
