@@ -9,6 +9,10 @@
 
 ## Overview
 
+## WIFI
+Network: g|Events
+Passsword: machinelearning
+
 ### Schedule
 
 |               |                       |
