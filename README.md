@@ -30,7 +30,7 @@ Passsword: machinelearning
 
 Teams!
 * Teams are encouraged, but individual participation is allowed.
-* Teams may have up to 4 participants. 
+* Teams may have up to 5 participants, but only 4 prizes are awarded per team. 
 * Register your project and all team mates [here](https://hackdash.org/dashboards/graphssf)
 
 Winners
